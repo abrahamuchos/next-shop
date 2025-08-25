@@ -178,3 +178,8 @@ fabric.properties
 # Azure Toolkit for IntelliJ plugin
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
+
+# API Environment files containing secrets
+docs/api/environment/*.json
+*.env
+.env
