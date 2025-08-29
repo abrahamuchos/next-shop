@@ -12,8 +12,7 @@ export default function Page(props: CategoryProps) {
 
   return (
     <>
-      <h1>Categoria dinamica</h1>
-      <h2>{categories}</h2>
+      <h1>Categoria dinámica: {categories}</h1>
     </>
   );
 }
