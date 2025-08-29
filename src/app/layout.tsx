@@ -4,6 +4,8 @@ import {Roboto} from 'next/font/google'
 import Header from "app/components/shared/Header/Header";
 import Footer from "app/components/shared/Footer/Footer";
 
+import 'app/sass/globals.scss'
+
 import type {Metadata} from "next";
 
 const robotoFont = Roboto({
