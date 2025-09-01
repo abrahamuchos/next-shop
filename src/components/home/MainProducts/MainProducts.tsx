@@ -37,6 +37,7 @@ const getProducts = async (): Promise<Product[]|[]> => {
         'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY || ""
       })
     })
+    throw new Error('Error al obtener los productos')
     const {products} = await response.json();
 
     return products;
@@ -56,7 +57,7 @@ export default async function MainProducts() {
       <h3>New Products released</h3>
 
       <div className={styles.MainProducts__grid}>
-        {products?.map((product) => (
+        {products.map((product) => (
           <article key={product.id}>
             <p>{product.title}</p>
             <Image src={product.images[0].src} alt={product.title} fill loading='eager'/>
