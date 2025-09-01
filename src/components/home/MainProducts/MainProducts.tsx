@@ -37,7 +37,6 @@ const getProducts = async (): Promise<Product[]|[]> => {
         'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY || ""
       })
     })
-    throw new Error('Error al obtener los productos')
     const {products} = await response.json();
 
     return products;
