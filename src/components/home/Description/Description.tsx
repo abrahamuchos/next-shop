@@ -20,7 +20,7 @@ export default function Description() {
     'Description__button--border': hasBorder,
   });
 
-  console.log(buttonStyles);
+  // console.log(buttonStyles);
 
   return (
     <section className={styles.Description}>

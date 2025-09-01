@@ -6,6 +6,12 @@ const nextConfig = {
     includePaths: [join(dirname('./'), 'src/sass')],
     prependData: `@import "main.scss";`,
   },
+  images: {
+    remotePatterns:[{
+      hostname: 'cdn.shopify.com',
+      protocol: 'https',
+    }]
+  }
 };
 
 export default nextConfig;
