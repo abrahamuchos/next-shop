@@ -7,7 +7,9 @@ import styles from './MainProducts.module.scss'
 
 
 export default async function MainProducts() {
-  const products = await getProducts();
+  // const products = await getProducts();
+  const response = await fetch('http://localhost:3000/api');
+  const products = await response.json();
   console.log(products);
 
   return (
