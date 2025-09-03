@@ -7,6 +7,7 @@ interface Product {
   id: number;
   title: string;
   body_html: string;
+  price: number;
   vendor: Vendor;
   product_type: string;
   created_at: Date;
