@@ -23,6 +23,8 @@ interface Product {
   options: Option[];
   images: Image[];
   image: Image;
+  description: string;
+  quantity: number;
 }
 
 interface Image {
