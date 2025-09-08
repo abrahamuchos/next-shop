@@ -1,10 +1,15 @@
-import styles from "./page.module.css";
+import Description from "app/components/home/Description/Description";
+import Hero from "app/components/home/Hero/Hero";
+import MainProducts from "app/components/home/MainProducts/MainProducts";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <h1>Hello World !</h1>
-      <p>Next Shop</p>
-    </div>
+    <main>
+      <Description />
+
+      <Hero/>
+
+      <MainProducts/>
+    </main>
   );
 }
