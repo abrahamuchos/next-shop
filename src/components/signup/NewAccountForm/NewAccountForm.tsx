@@ -9,10 +9,10 @@ export default function NewAccountForm() {
   const [errors, setErrors] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    handleCreateUser(formData)
+    await handleCreateUser(formData)
   }
 
   return (
@@ -21,13 +21,13 @@ export default function NewAccountForm() {
 
       {/*Sign Up Form*/}
       <form className={styles.NewAccountForm__form} onSubmit={handleSubmit}>
-        <input type="text" name="first_name" placeholder="Name" disabled={loading}/>
-        <input type="text" name="last_name" placeholder="Lastname" disabled={loading}/>
+        <input type="text" name="firstName" placeholder="Name" disabled={loading}/>
+        <input type="text" name="lastName" placeholder="Lastname" disabled={loading}/>
         <input type="text" name="email" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                disabled={loading}/>
         <input type="text" name="phone" placeholder="phone number" pattern="^[0-9]*$" disabled={loading}/>
         <input type="password" name="password" placeholder="password" disabled={loading}/>
-        <input type="password" name="password_confirmation" placeholder="re-type password" disabled={loading}/>
+        <input type="password" name="passwordConfirmation" placeholder="re-type password" disabled={loading}/>
         <input type="submit" name="submit" value="Crear cuenta" disabled={loading}/>
       </form>
       {/*End Sign Up Form*/}
